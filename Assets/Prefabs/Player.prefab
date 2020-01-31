@@ -164,11 +164,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  counterMovement: 0.175
-  maxSlopeAngle: 35
+  counterMovement: 0.3
+  maxSlopeAngle: 180
   slideForce: 400
   slideCounterMovement: 0.2
-  jumpForce: 550
+  jumpForce: 300
 --- !u!136 &7588420433751908827
 CapsuleCollider:
   m_ObjectHideFlags: 0
