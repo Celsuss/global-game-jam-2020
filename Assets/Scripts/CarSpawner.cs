@@ -8,6 +8,9 @@ public class CarSpawner : MonoBehaviour
     public Transform[] SpawnPositions;
     public GameObject CarPrefab;
     public float CarTimer;
+
+ //   public WaypointManager m_waypointManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,7 @@ public class CarSpawner : MonoBehaviour
     {
         var t = SpawnPositions[Random.Range(0, SpawnPositions.Length)];
         var c = Instantiate(CarPrefab, t.position, t.rotation);
-        
+//        CarWaypoint carwaypoint = c.GetComponent(typeof(CarWaypoint)) as CarWaypoint;
+//        carwaypoint.m_WaypointManager = m_waypointManager;        
     }
 }
