@@ -5140,7 +5140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5177531020797399219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09fbc7d7c800570459fe2a44a9f7ad2d, type: 3}
+  m_Script: {fileID: 11500000, guid: ffd2028b4f2a74a4ebae77f2a0ff5a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OnDestroyed:
@@ -5171,8 +5171,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Health: 3
-  MaxHealth: 3
+  Health: 5
+  MaxHealth: 5
   RepairAmount: 0
   Name: Bridge
 --- !u!1 &5177531020890006942
@@ -5449,7 +5449,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5177531021001290256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f5f6254f44fe6841bea0b0b4feb5d25, type: 3}
+  m_Script: {fileID: 11500000, guid: 86101f39ae8f61e4eab365b3166e2168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TakeDamage:

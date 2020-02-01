@@ -186,14 +186,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8889326299791424595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0c4a2e1d1a2c254f9faddfa90e7455f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3860e59bba4a643886fe853f1f7906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 0}
-  RepairDistance: 4
+  RepairDistance: 5
   RepairableLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 2304
   RepairMenuCanvas: {fileID: 8889326299791424604}
   RepairSlider: {fileID: 8889326301157993942}
   RepairTitle: {fileID: 8889326300201249112}
