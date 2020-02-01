@@ -41,9 +41,6 @@ public class PlayerMovement : MonoBehaviour {
     //Input
     float x, y;
     bool jumping, sprinting, crouching;
-
-    //Status
-    bool isSprinting;
     
     //Sliding
     private Vector3 normalVector = Vector3.up;
@@ -57,7 +54,6 @@ public class PlayerMovement : MonoBehaviour {
         playerScale =  transform.localScale;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        isSprinting = false;
     }
 
     
@@ -78,42 +74,15 @@ public class PlayerMovement : MonoBehaviour {
         y = Input.GetAxisRaw("Vertical");
         jumping = Input.GetButton("Jump");
         crouching = Input.GetKey(KeyCode.LeftControl);
-        sprinting = Input.GetButton("Sprint");
       
         //Crouching
         if (Input.GetKeyDown(KeyCode.LeftControl))
             StartCrouch();
         if (Input.GetKeyUp(KeyCode.LeftControl))
             StopCrouch();
-        if (Input.GetButtonDown("Sprint"))
-        {
-            if (!crouching)
-            {
-                isSprinting = true;
-                moveSpeed *= 1.5f;
-                maxSpeed *= 1.5f;
-            }
-        }
-        if (Input.GetButtonUp("Sprint"))
-        {
-            if (isSprinting)
-            {
-                isSprinting = false;
-                moveSpeed /= 1.5f;
-                maxSpeed /= 1.5f;
-            }
-        }
     }
 
     private void StartCrouch() {
-        if (isSprinting)
-        {
-            isSprinting = false;
-            moveSpeed /= 1.5f;
-            maxSpeed /= 1.5f;
-        }
-        maxSpeed *= 0.25f;
-        moveSpeed *= 0.25f;
         transform.localScale = crouchScale;
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
         if (rb.velocity.magnitude > 0.5f) {
@@ -124,14 +93,6 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void StopCrouch() {
-        maxSpeed *= 4;
-        moveSpeed *= 4;
-        if (sprinting)
-        {
-            isSprinting = true;
-            moveSpeed *= 1.5f;
-            maxSpeed *= 1.5f;
-        }
         transform.localScale = playerScale;
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
     }
@@ -155,8 +116,8 @@ public class PlayerMovement : MonoBehaviour {
         
         //If sliding down a ramp, add force down so player stays grounded and also builds speed
         if (crouching && grounded && readyToJump) {
-            rb.AddForce(Vector3.down * Time.deltaTime * 500);
-            //return;
+            rb.AddForce(Vector3.down * Time.deltaTime * 3000);
+            return;
         }
         
         //If speed is larger than maxspeed, cancel out the input so you don't go over max speed
@@ -173,16 +134,13 @@ public class PlayerMovement : MonoBehaviour {
             multiplier = 0.5f;
             multiplierV = 0.5f;
         }
-
+        
         // Movement while sliding
-        //if (grounded && crouching) multiplierV = 0f;
+        if (grounded && crouching) multiplierV = 0f;
 
         //Apply forces to move player
-        Vector3 asd = orientation.transform.forward * y * moveSpeed * multiplier;
-        Vector3 qwe = orientation.transform.right * x * moveSpeed * multiplier;
-        rb.AddForce((asd + qwe).normalized * 1800 * Time.deltaTime);
-        //rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
-        //rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * multiplier);
+        rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
+        rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * multiplier);
     }
 
     private void Jump() {

@@ -49,3 +49,6 @@ Assets/NaninovelData/Saves/
 
 # VS Code
 .vscode/
+
+# Meta files
+*.meta
