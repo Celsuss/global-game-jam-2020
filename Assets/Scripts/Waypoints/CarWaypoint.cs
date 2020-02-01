@@ -14,10 +14,11 @@ public class CarWaypoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_CurrentWaypointIndex = 0;
-        m_CurrentWaypoint = null;
         Assert.IsNotNull(m_WaypointManager);
         m_CarMovement = gameObject.GetComponent<CarMovement>();
+
+        m_CurrentWaypointIndex = 0;
+        UpdateTarget();
     }
 
     // Update is called once per frame
@@ -28,18 +29,24 @@ public class CarWaypoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Waypoint")
+        if(other.gameObject.tag == "Waypoint" && other.transform.position == m_CurrentWaypoint.position)
         {    
             Debug.Log("Waypoint reached");
-            m_CurrentWaypoint = m_WaypointManager.GetNextWaypoint(m_CurrentWaypointIndex);
-            m_CurrentWaypointIndex += 1;
-
-            if(m_CurrentWaypoint == null)
-            {
-                // Kill the car
-            }
-
-            m_CarMovement.SetTarget(m_CurrentWaypoint);
+            UpdateTarget();
         }
+    }
+
+    void UpdateTarget()
+    {
+        m_CurrentWaypoint = m_WaypointManager.GetNextWaypoint(m_CurrentWaypointIndex);
+        m_CurrentWaypointIndex = m_CurrentWaypointIndex+1;
+
+        if(m_CurrentWaypoint == null)
+        {
+            // Kill the car
+            Debug.Log("STOP!");
+        }
+
+        m_CarMovement.SetTarget(m_CurrentWaypoint);
     }
 }

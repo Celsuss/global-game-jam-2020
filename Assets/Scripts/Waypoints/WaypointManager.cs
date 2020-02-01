@@ -22,8 +22,12 @@ public class WaypointManager : MonoBehaviour
     public Transform GetNextWaypoint(int currentWaypointIndex)
     {
         if(currentWaypointIndex >= m_Waypoints.Count)
+        {
+            Debug.Log("Can't find waypoint index: " + currentWaypointIndex);
             return null;
+        }
 
-        return m_Waypoints[currentWaypointIndex+1]; 
+        Debug.Log("Current waypoint index: " + currentWaypointIndex);
+        return m_Waypoints[currentWaypointIndex]; 
     }
 }
