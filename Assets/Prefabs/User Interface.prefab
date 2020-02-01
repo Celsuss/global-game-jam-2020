@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 0}
-  RepairDistance: 3
+  RepairDistance: 4
   RepairableLayer:
     serializedVersion: 2
     m_Bits: 1024

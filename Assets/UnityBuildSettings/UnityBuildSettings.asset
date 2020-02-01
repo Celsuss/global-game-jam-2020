@@ -38,7 +38,7 @@ MonoBehaviour:
   _productParameters:
     buildCounter: 21
     lastGeneratedVersion: 0.0.1
-    version: 0.0.1
+    version: 0.0.3
     autoGenerate: 1
   _releaseTypeList:
     releaseTypes:

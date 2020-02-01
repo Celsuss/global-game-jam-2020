@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Destroyable : MonoBehaviour {
+
+    public UnityEvent OnDestroyed;
+    public UnityEvent OnRepaired;
 
     public struct RigidbodyRoot {
         public Rigidbody Body;
@@ -46,6 +50,8 @@ public class Destroyable : MonoBehaviour {
             Rigidbodies.Add(x);
             body.isKinematic = true;
         }
+
+        GetComponentInChildren<ParticleSystem>().Stop();
     }
 
     public void Destroy() {
@@ -53,6 +59,7 @@ public class Destroyable : MonoBehaviour {
             body.Body.isKinematic = false;
         }
         RepairAmount = 0;
+        OnDestroyed.Invoke();
     }
 
     public void Repair(float Delta)
@@ -65,13 +72,14 @@ public class Destroyable : MonoBehaviour {
     public void Repaired() {
         foreach(var body in Rigidbodies) {
             body.Body.isKinematic = true;
-            body.Body.position = (body.Position);
-            body.Body.rotation = (body.Rotation);
+            body.Body.MovePosition(body.Position);
+            body.Body.MoveRotation(body.Rotation);
             body.Body.angularVelocity = Vector3.zero;
             body.Body.velocity = Vector3.zero;
         }
         RepairAmount = 0;
         Health = MaxHealth;
+        OnRepaired.Invoke();
     }
 
     void Update() {
