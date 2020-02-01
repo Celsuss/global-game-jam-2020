@@ -21,7 +21,7 @@ public class IconBar : MonoBehaviour {
             _value = Mathf.Min(Icons.Length, value);
             for (int i = 0; i < _value; i++)
                 Icons[i].color = EnabledColor;
-            for (int i = Icons.Length-_value; i < _value; i++)
+            for (int i = _value; i < Icons.Length; i++)
                 Icons[i].color = DisabledColor;
         }
     }
