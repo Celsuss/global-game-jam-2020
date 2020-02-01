@@ -46,3 +46,9 @@ Assets/TEMP_NANINOVEL/
 Assets/TEMP_UNITY_COMMON/
 Assets/NaninovelData/Settings.json
 Assets/NaninovelData/Saves/
+
+# VS Code
+.vscode/
+
+# Meta files
+*.meta
