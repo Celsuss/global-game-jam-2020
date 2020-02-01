@@ -19,10 +19,10 @@ public class CarCollision : MonoBehaviour
     // Trigger on collsion.
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("OnTriggerEnter");
         if(other.gameObject.tag == "Player"){
             // Kill player if collision with player
             Debug.Log("Player Hit!");
+            other.gameObject.GetComponent<PlayerSpawn>().SpawnPlayer();
         }
     }
 }
