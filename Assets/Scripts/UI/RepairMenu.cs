@@ -10,7 +10,7 @@ public class RepairMenu : MonoBehaviour {
     public LayerMask RepairableLayer;
 
     public Canvas RepairMenuCanvas;
-    public Slider RepairSlider;
+    public Image RepairSlider;
     public Text RepairTitle;
 
     void Start() {
@@ -25,7 +25,7 @@ public class RepairMenu : MonoBehaviour {
             var d = hit.collider.GetComponentInParent<Destroyable>();
             if (d && !d.IsAlive) {
                 RepairMenuCanvas.enabled = true;
-                RepairSlider.value = d.RepairAmount;
+                RepairSlider.fillAmount = d.RepairAmount;
                 RepairTitle.text = "Destroyed " + d.Name;
 
                 if (Input.GetButton("Fire1"))
