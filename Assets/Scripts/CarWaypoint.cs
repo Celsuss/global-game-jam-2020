@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class CarWaypoint : MonoBehaviour
 {
-    int currentWaypoint;
-    WaypointManager myWaypointManager;
+    int m_CurrentWaypointIndex;
+    WaypointManager m_WaypointManager;
+    Waypoint m_CurrentWaypoint;
 
     //When the Primitive collides with the walls, it will reverse direction
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == Waypoint){
-            currentWayPoint = myWaypointManager.getNextWaypoint();
+        if(other.tag == "Waypoint"){
+            m_CurrentWaypoint = m_WaypointManager.getNextWaypoint(m_CurrentWaypointIndex);
+
         }
-        if(currentWaypoint == NULL){
-            //Desummon + PlayerScore+1
+
+        if(m_CurrentWaypoint == null){
+            // Kill car and increase player score
         }
     }
     // Start is called before the first frame update
     void Start()
     {
-        currentWaypoint = 0;
+        m_CurrentWaypointIndex = 0;
     }
 
     // Update is called once per frame

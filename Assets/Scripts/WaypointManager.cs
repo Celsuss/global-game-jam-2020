@@ -4,18 +4,7 @@ using UnityEngine;
 
 public class WaypointManager : MonoBehaviour
 {
-    List[] WaypointList;
-    int max;
-    int getNextWaypoint(){
-        CarWaypoint car = GameObject.GetComponent("CarWaypoint") as CarWaypoint;
-        if(car.currentWaypoint == (max-1)){
-            return null;
-        }
-        else{
-            return (car.currentWaypoint + 1);
-            
-        }
-    }
+    List<Waypoint> WaypointList;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +16,12 @@ public class WaypointManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public Waypoint getNextWaypoint(int currentWaypoint){
+        if(currentWaypoint >= WaypointList.Count)
+            return null;
+        else
+            return WaypointList[currentWaypoint+1];
     }
 }
