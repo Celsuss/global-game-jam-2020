@@ -29,6 +29,7 @@ public class CarWaypoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("On Trigger");
         if(other.gameObject.tag == "Waypoint" && other.transform.position == m_CurrentWaypoint.position)
         {    
             Debug.Log("Waypoint reached");

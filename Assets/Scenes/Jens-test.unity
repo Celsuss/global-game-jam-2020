@@ -368,7 +368,7 @@ MonoBehaviour:
     motor: 0
     steering: 0
   maxMotorTorque: 200
-  maxSteeringAngle: 30
+  maxSteeringAngle: 15
   m_Target: {fileID: 0}
 --- !u!114 &355403064
 MonoBehaviour:
@@ -852,6 +852,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waypoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 233198679317142647, guid: ccb34b0774c259445b0bf20d1797f0ea,
+        type: 3}
+      propertyPath: m_TagString
+      value: Waypoint
+      objectReference: {fileID: 0}
     - target: {fileID: 357018242159725630, guid: ccb34b0774c259445b0bf20d1797f0ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1140,6 +1145,11 @@ PrefabInstance:
     - target: {fileID: 233198679317142647, guid: ccb34b0774c259445b0bf20d1797f0ea,
         type: 3}
       propertyPath: m_Name
+      value: Waypoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 233198679317142647, guid: ccb34b0774c259445b0bf20d1797f0ea,
+        type: 3}
+      propertyPath: m_TagString
       value: Waypoint
       objectReference: {fileID: 0}
     - target: {fileID: 357018242159725630, guid: ccb34b0774c259445b0bf20d1797f0ea,
