@@ -9,6 +9,7 @@ public class CarWaypoint : MonoBehaviour
     WaypointManager m_WaypointManager;
     int m_CurrentWaypointIndex;
     Transform m_CurrentWaypoint;
+    CarMovement m_CarMovement;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class CarWaypoint : MonoBehaviour
         m_CurrentWaypointIndex = 0;
         m_CurrentWaypoint = null;
         Assert.IsNotNull(m_WaypointManager);
+        m_CarMovement = gameObject.GetComponent<CarMovement>();
     }
 
     // Update is called once per frame
@@ -36,6 +38,8 @@ public class CarWaypoint : MonoBehaviour
             {
                 // Kill the car
             }
+
+            m_CarMovement.SetTarget(m_CurrentWaypoint);
         }
     }
 }

@@ -14,7 +14,8 @@ public class CarMovement : MonoBehaviour
 {
     public List<AxleInfo> axleInfos; // the information about each individual axle
     public float maxMotorTorque; // maximum torque the motor can apply to wheel
-    public float maxSteeringAngle; // maximum steer angle the wheel can have   
+    public float maxSteeringAngle; // maximum steer angle the wheel can have
+    private Transform m_Target;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,12 @@ public class CarMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 1. Calculate direction to waypoint
         
+
+        // 2. Get forward vector
+
+        // 3. Turn to match waypoint direction
     }
 
     public void FixedUpdate()
@@ -45,4 +51,8 @@ public class CarMovement : MonoBehaviour
         }
     }
 
+    public void SetTarget(Transform target)
+    {
+        m_Target = target;
+    }
 }
