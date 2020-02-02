@@ -87,5 +87,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e819da9eaed85d7418d8bbfef4490bde, type: 2}
+    - target: {fileID: 8610507224432304497, guid: dfd05892a0ddf1149854eefdde0f79fc,
+        type: 3}
+      propertyPath: maxMotorTorque
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfd05892a0ddf1149854eefdde0f79fc, type: 3}
