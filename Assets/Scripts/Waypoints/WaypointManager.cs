@@ -23,11 +23,9 @@ public class WaypointManager : MonoBehaviour
     {
         if(currentWaypointIndex >= m_Waypoints.Count)
         {
-            Debug.Log("Can't find waypoint index: " + currentWaypointIndex);
             return null;
         }
 
-        Debug.Log("Current waypoint index: " + currentWaypointIndex);
         return m_Waypoints[currentWaypointIndex]; 
     }
 }
