@@ -2,7 +2,7 @@
 
 ## Team Road Kill Worker
 Playable link: 
-[Not yet available](https://www.google.com)
+[itch.io/ggj2020](https://catalopegames.itch.io/ggj2020)
 
 ## Contributers:
 
