@@ -80,6 +80,9 @@ public class PlayerMovement : MonoBehaviour {
     /// Find user input. Should put this in its own class but im lazy
     /// </summary>
     private void MyInput() {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Die();
+
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
         jumping = Input.GetButton("Jump");
