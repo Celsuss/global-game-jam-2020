@@ -11,13 +11,14 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void StartGame()
@@ -33,7 +34,6 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Quit Game");
         Application.Quit();
     }
 }
