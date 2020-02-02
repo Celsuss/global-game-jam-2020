@@ -14,7 +14,8 @@ public class CarMovement : MonoBehaviour
 {
     public List<AxleInfo> axleInfos; // the information about each individual axle
     public float maxMotorTorque; // maximum torque the motor can apply to wheel
-    public float maxSteeringAngle; // maximum steer angle the wheel can have
+    // public float maxSteeringAngle; // maximum steer angle the wheel can have
+    public float rotationDamping = 6.0f;
 
     [SerializeField]
     Transform m_Target;
@@ -41,52 +42,22 @@ public class CarMovement : MonoBehaviour
         // 1. Calculate direction to waypoint
         Vector3 target_dir = m_Target.position - transform.position;
 
-        // 
-        float rotationDamping = 6.0f;
+        // float rotationDamping = 6.0f;
         Quaternion rotation = Quaternion.LookRotation(m_Target.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationDamping * Time.deltaTime);
-        //
-
-        // target_dir.y = 0;
-        // Vector3 forward = transform.forward;
-        // forward.y = 0;
-
-        // float angle_between = Vector3.Angle(forward, target_dir);
-
-        // // 2. Get forward vector
-        // if(angle_between >= 5 && angle_between < 85){
-        //     // Turn left
-        //     Debug.Log("Turning left, angle: " + angle_between);
-        //     m_Steering = -1;
-        // }
-        // else if(angle_between > 95){
-        //     // Turn right
-        //     m_Steering = 1;
-        //     Debug.Log("Turning right, angle: " + angle_between);
-        // }
-        // else{
-        //     // Debug.Log("Forward, angle: " + angle_between);
-        //     m_Steering = 0;
-        // }
     }
 
     public void FixedUpdate()
     {
-        float motor_input = maxMotorTorque * Input.GetAxis("Vertical");
-        float steering_input = maxSteeringAngle * Input.GetAxis("Horizontal");
-        // Debug.Log("Steering: " + steering_input);
-
         float motor = maxMotorTorque * m_Speed;
-        float steering = maxSteeringAngle * m_Steering;
+        // float steering = maxSteeringAngle * m_Steering;
 
-        // motor = motor_input;
-        // steering = steering_input;
             
         foreach (AxleInfo axleInfo in axleInfos) {
-            if (axleInfo.steering) {
-                // axleInfo.leftWheel.steerAngle = steering;
-                // axleInfo.rightWheel.steerAngle = steering;
-            }
+            // if (axleInfo.steering) {
+            //     axleInfo.leftWheel.steerAngle = steering;
+            //     axleInfo.rightWheel.steerAngle = steering;
+            // }
             if (axleInfo.motor) {
                 axleInfo.leftWheel.motorTorque = motor;
                 axleInfo.rightWheel.motorTorque = motor;
