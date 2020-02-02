@@ -634,7 +634,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 1abe9acba288f4e42850390515296cc8, type: 3}
+  - {fileID: 2100000, guid: d554328504fa6e94a82ed14bb9aa301d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -713,7 +713,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 1abe9acba288f4e42850390515296cc8, type: 3}
+  - {fileID: 2100000, guid: d554328504fa6e94a82ed14bb9aa301d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -792,7 +792,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 1abe9acba288f4e42850390515296cc8, type: 3}
+  - {fileID: 2100000, guid: d554328504fa6e94a82ed14bb9aa301d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -871,7 +871,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 1abe9acba288f4e42850390515296cc8, type: 3}
+  - {fileID: 2100000, guid: d554328504fa6e94a82ed14bb9aa301d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1055,6 +1055,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider tank 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5902419001559106108, guid: 1abe9acba288f4e42850390515296cc8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c1af27b1a663a5449f45c8f37b4d26e, type: 2}
     - target: {fileID: 5984388485589536855, guid: 1abe9acba288f4e42850390515296cc8,
         type: 3}
       propertyPath: m_IsActive
