@@ -8,12 +8,6 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Main.unity
-    guid: 9baf26868b8d37349988ee17710472f4
-  - enabled: 0
-    path: Assets/Scenes/Jesper-test.unity
-    guid: 504392e42d48df14aac08357e953e867
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 147cbf299931d707a8b8f9b97461b406

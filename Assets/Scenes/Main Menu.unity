@@ -7420,6 +7420,16 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6825336901928858030, guid: 693ea91c23f0b06df9e5939de191d750,
+        type: 3}
+      propertyPath: m_Text
+      value: Road Kill Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825336901928858031, guid: 693ea91c23f0b06df9e5939de191d750,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6825336902208590561, guid: 693ea91c23f0b06df9e5939de191d750,
         type: 3}
       propertyPath: m_LocalPosition.x

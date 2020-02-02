@@ -99,8 +99,8 @@ public class PlayerMovement : MonoBehaviour {
             if (!crouching)
             {
                 isSprinting = true;
-                moveSpeed *= 1.5f;
-                maxSpeed *= 1.5f;
+                moveSpeed *= 1.22f;
+                maxSpeed *= 1.22f;
             }
         }
         if (Input.GetButtonUp("Sprint"))
@@ -108,8 +108,8 @@ public class PlayerMovement : MonoBehaviour {
             if (isSprinting)
             {
                 isSprinting = false;
-                moveSpeed /= 1.5f;
-                maxSpeed /= 1.5f;
+                moveSpeed /= 1.22f;
+                maxSpeed /= 1.22f;
             }
         }
     }
@@ -118,8 +118,8 @@ public class PlayerMovement : MonoBehaviour {
         if (isSprinting)
         {
             isSprinting = false;
-            moveSpeed /= 1.5f;
-            maxSpeed /= 1.5f;
+            moveSpeed /= 1.22f;
+            maxSpeed /= 1.22f;
         }
         maxSpeed *= 0.25f;
         moveSpeed *= 0.25f;
