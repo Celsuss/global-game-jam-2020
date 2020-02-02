@@ -72,8 +72,8 @@ public class Destroyable : MonoBehaviour {
     public void Repaired() {
         foreach(var body in Rigidbodies) {
             body.Body.isKinematic = true;
-            body.Body.MovePosition(body.Position);
-            body.Body.MoveRotation(body.Rotation);
+            body.Body.position = (body.Position);
+            body.Body.rotation = (body.Rotation);
             body.Body.angularVelocity = Vector3.zero;
             body.Body.velocity = Vector3.zero;
         }
