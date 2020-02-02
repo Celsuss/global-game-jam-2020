@@ -78,7 +78,7 @@ public class Destroyable : MonoBehaviour {
             body.Body.velocity = Vector3.zero;
         }
         RepairAmount = 0;
-        Health = MaxHealth;
+        Health = Random.Range(MaxHealth/2, MaxHealth);
         OnRepaired.Invoke();
     }
 
