@@ -36,14 +36,14 @@ MonoBehaviour:
     buildPath: $YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION
     openFolderPostBuild: 1
   _productParameters:
-    buildCounter: 22
-    lastGeneratedVersion: 0.0.4
-    version: 0.0.4
+    buildCounter: 25
+    lastGeneratedVersion: 0.0.5
+    version: 0.0.5
     autoGenerate: 1
   _releaseTypeList:
     releaseTypes:
     - typeName: DRM Free
-      bundleIndentifier: com.catalopegames.markofmona
+      bundleIndentifier: se.liugamejam.roadkillworker
       companyName: LiU Game Jam
       productName: GGJ2020
       developmentBuild: 0
@@ -51,7 +51,9 @@ MonoBehaviour:
       enableHeadlessMode: 0
       customDefines: 
       sceneList:
-        enabledScenes: []
+        enabledScenes:
+        - fileGUID: 147cbf299931d707a8b8f9b97461b406
+        - fileGUID: 73153486be03b134e9fdf22352d778d3
   _platformList:
     platforms:
     - enabled: 1
@@ -144,7 +146,7 @@ MonoBehaviour:
       - enabled: 1
         childKeys:
         - DRM Free/WebGL/WebGL
-      - enabled: 0
+      - enabled: 1
         childKeys: []
       - enabled: 1
         childKeys:
