@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 [System.Serializable]
 public class AxleInfo {
@@ -12,11 +13,12 @@ public class AxleInfo {
 
 public class CarMovement : MonoBehaviour
 {
+    [SerializeField]
+    Transform m_Center_of_mass;
     public List<AxleInfo> axleInfos; // the information about each individual axle
     public float maxMotorTorque; // maximum torque the motor can apply to wheel
     public float maxSteeringAngle; // maximum steer angle the wheel can have
 
-    [SerializeField]
     Transform m_Target;
 
     int m_Steering;
@@ -27,6 +29,10 @@ public class CarMovement : MonoBehaviour
     {
         m_Steering = 0;
         m_Speed = 1;
+
+        Assert.IsNotNull(m_Center_of_mass);
+        Rigidbody rigid_body = gameObject.GetComponent<Rigidbody>();
+        rigid_body.centerOfMass = m_Center_of_mass.localPosition;
     }
 
     // Update is called once per frame
