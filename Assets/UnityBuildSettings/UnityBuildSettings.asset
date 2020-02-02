@@ -36,9 +36,9 @@ MonoBehaviour:
     buildPath: $YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION
     openFolderPostBuild: 1
   _productParameters:
-    buildCounter: 21
-    lastGeneratedVersion: 0.0.1
-    version: 0.0.3
+    buildCounter: 22
+    lastGeneratedVersion: 0.0.4
+    version: 0.0.4
     autoGenerate: 1
   _releaseTypeList:
     releaseTypes:
