@@ -14,5 +14,6 @@ public class Helper : MonoBehaviour {
     public void TeleportToStart() {
         Player.transform.position = Pos.position;
         Player.transform.rotation = Pos.rotation;
+        gameObject.SetActive(false);
     }
 }

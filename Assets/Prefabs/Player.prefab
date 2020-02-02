@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7588420432770573553}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7588420433569512895}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,9 +74,9 @@ GameObject:
   - component: {fileID: 7588420433751908826}
   - component: {fileID: 7588420433751908827}
   - component: {fileID: 7588420433751908836}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,12 +163,13 @@ MonoBehaviour:
   grounded: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 3328
   counterMovement: 0.3
   maxSlopeAngle: 180
   slideForce: 800
   slideCounterMovement: 0.75
   jumpForce: 250
+  DeathObject: {fileID: 0}
 --- !u!136 &7588420433751908827
 CapsuleCollider:
   m_ObjectHideFlags: 0

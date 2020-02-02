@@ -6,8 +6,10 @@ public class CarSpawner : MonoBehaviour
 {
     public float TimeBetweenSpawn;
     public Transform[] SpawnPositions;
-    public GameObject CarPrefab;
+    public CarWaypoint CarPrefab;
     public float CarTimer;
+
+    public WaypointManager manager;
 
  //   public WaypointManager m_waypointManager;
 
@@ -23,6 +25,7 @@ public class CarSpawner : MonoBehaviour
     {
         var t = SpawnPositions[Random.Range(0, SpawnPositions.Length)];
         var c = Instantiate(CarPrefab, t.position, t.rotation);
+        c.m_WaypointManager = manager;
 //        CarWaypoint carwaypoint = c.GetComponent(typeof(CarWaypoint)) as CarWaypoint;
 //        carwaypoint.m_WaypointManager = m_waypointManager;        
     }

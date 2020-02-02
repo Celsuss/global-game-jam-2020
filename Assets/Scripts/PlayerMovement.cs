@@ -60,6 +60,12 @@ public class PlayerMovement : MonoBehaviour {
         isSprinting = false;
     }
 
+    public GameObject DeathObject;
+
+    public void Die() {
+        DeathObject.SetActive(true);
+    }
+
     
     private void FixedUpdate() {
         Movement();

@@ -5,8 +5,7 @@ using UnityEngine.Assertions;
 
 public class CarWaypoint : MonoBehaviour
 {
-    [SerializeField]
-    WaypointManager m_WaypointManager;
+    public WaypointManager m_WaypointManager;
     int m_CurrentWaypointIndex;
     Transform m_CurrentWaypoint;
     CarMovement m_CarMovement;

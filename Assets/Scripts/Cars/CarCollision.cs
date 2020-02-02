@@ -22,7 +22,7 @@ public class CarCollision : MonoBehaviour
         if(other.gameObject.tag == "Player"){
             // Kill player if collision with player
             Debug.Log("Player Hit!");
-            other.gameObject.GetComponent<PlayerSpawn>().SpawnPlayer();
+            FindObjectOfType<PlayerMovement>().Die();
         }
     }
 }
