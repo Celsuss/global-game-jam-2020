@@ -7,18 +7,26 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField]
     string m_SceneName;
+    [SerializeField]
+    GameObject m_HowToPlayImage;
+    
+    bool m_ShowHowToPlayImage = false;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        // m_HowToPlayRawImage = m_HowToPlayRawImage.getComponent<RawImage>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(m_ShowHowToPlayImage && Input.anyKeyDown){
+            HideHowToPlay();
+        }
     }
 
     public void StartGame()
@@ -27,9 +35,16 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(m_SceneName, LoadSceneMode.Single);
     }
 
-    public void HowToPlay()
+    private void HideHowToPlay()
     {
+        m_HowToPlayImage.active = false;
+        m_ShowHowToPlayImage = false;
+    }
 
+    public void ShowHowToPlay()
+    {
+        m_HowToPlayImage.active = true;
+        m_ShowHowToPlayImage = true;
     }
 
     public void QuitGame()
