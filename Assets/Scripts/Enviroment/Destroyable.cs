@@ -56,6 +56,9 @@ public class Destroyable : MonoBehaviour {
         }
 
         GetComponentInChildren<ParticleSystem>().Stop();
+
+        if (!IsAlive)
+            Destroy();
     }
 
     public void Destroy() {
@@ -86,9 +89,5 @@ public class Destroyable : MonoBehaviour {
         RepairAmount = 0;
         Health = Random.Range(MaxHealth/2, MaxHealth);
         OnRepaired.Invoke();
-    }
-
-    void Update() {
-        
     }
 }

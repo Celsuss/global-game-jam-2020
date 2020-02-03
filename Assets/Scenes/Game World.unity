@@ -2417,12 +2417,12 @@ PrefabInstance:
     - target: {fileID: 6028578003045751205, guid: 5d4dead3eec955f42a0f731a17bf84b1,
         type: 3}
       propertyPath: Health
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6028578003045751205, guid: 5d4dead3eec955f42a0f731a17bf84b1,
         type: 3}
       propertyPath: MaxHealth
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4dead3eec955f42a0f731a17bf84b1, type: 3}
@@ -5518,7 +5518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de51be80b7ba0443ba87c461c74284e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeBetweenSpawn: 30
+  TimeBetweenSpawn: 60
   SpawnPositions:
   - {fileID: 1551861609}
   - {fileID: 1915542015}
@@ -5703,7 +5703,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.5864e-41, y: 1.04e-43, z: 5.41e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0.0000000026493474}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7019,7 +7019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de51be80b7ba0443ba87c461c74284e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeBetweenSpawn: 8
+  TimeBetweenSpawn: 30
   SpawnPositions:
   - {fileID: 2016051102}
   - {fileID: 1976730864}
@@ -7730,7 +7730,7 @@ PrefabInstance:
     - target: {fileID: 6028578003045751205, guid: 5d4dead3eec955f42a0f731a17bf84b1,
         type: 3}
       propertyPath: MaxHealth
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4dead3eec955f42a0f731a17bf84b1, type: 3}
@@ -14376,12 +14376,12 @@ PrefabInstance:
     - target: {fileID: 6028578003045751205, guid: 5d4dead3eec955f42a0f731a17bf84b1,
         type: 3}
       propertyPath: Health
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6028578003045751205, guid: 5d4dead3eec955f42a0f731a17bf84b1,
         type: 3}
       propertyPath: MaxHealth
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4dead3eec955f42a0f731a17bf84b1, type: 3}
@@ -14565,12 +14565,12 @@ PrefabInstance:
     - target: {fileID: 6028578003045751205, guid: 5d4dead3eec955f42a0f731a17bf84b1,
         type: 3}
       propertyPath: Health
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6028578003045751205, guid: 5d4dead3eec955f42a0f731a17bf84b1,
         type: 3}
       propertyPath: MaxHealth
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4dead3eec955f42a0f731a17bf84b1, type: 3}
