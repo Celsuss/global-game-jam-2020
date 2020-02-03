@@ -36,16 +36,16 @@ MonoBehaviour:
     buildPath: $YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION
     openFolderPostBuild: 1
   _productParameters:
-    buildCounter: 26
-    lastGeneratedVersion: 0.1.0
-    version: 0.1.0
+    buildCounter: 27
+    lastGeneratedVersion: 1.0.1
+    version: 1.0.1
     autoGenerate: 1
   _releaseTypeList:
     releaseTypes:
     - typeName: DRM Free
       bundleIndentifier: se.liugamejam.roadkillworker
       companyName: LiU Game Jam
-      productName: GGJ2020
+      productName: Roadkill Worker
       developmentBuild: 0
       allowDebugging: 0
       enableHeadlessMode: 0
@@ -240,9 +240,9 @@ MonoBehaviour:
   filter:
     condition: 0
     clauses: []
-  pathToButlerExe: D:\Programs\Butler\butler.exe
-  nameOfItchUser: catalopegames
-  nameOfItchGame: ggj2020
+  pathToButlerExe: C:\Program Files\butler\butler.exe
+  nameOfItchUser: j3x
+  nameOfItchGame: roadkill-worker
   useGeneratedBuildVersion: 1
   showUploadProgress: 0
   itchChannelOverride: 
