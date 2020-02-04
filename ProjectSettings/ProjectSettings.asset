@@ -587,7 +587,7 @@ PlayerSettings:
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
     1: 
-    13: BUILD_TYPE_DRMFREE;BUILD_PLATFORM_WEBGL;BUILD_ARCH_WEBGL
+    13: 
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
