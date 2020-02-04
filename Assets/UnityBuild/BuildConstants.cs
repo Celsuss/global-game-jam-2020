@@ -31,11 +31,11 @@ public static class BuildConstants
         None,
     }
 
-    public static readonly System.DateTime buildDate = new System.DateTime(637163098826433107);
-    public const string version = "1.0.1";
+    public static readonly System.DateTime buildDate = new System.DateTime(637163995714751270);
+    public const string version = "1.0.3";
     public const ReleaseType releaseType = ReleaseType.DRM_Free;
-    public const Platform platform = Platform.Linux;
-    public const Architecture architecture = Architecture.Linux_x64;
+    public const Platform platform = Platform.WebGL;
+    public const Architecture architecture = Architecture.WebGL;
     public const Distribution distribution = Distribution.None;
 }
 

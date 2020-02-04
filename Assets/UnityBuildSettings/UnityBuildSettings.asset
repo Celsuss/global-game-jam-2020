@@ -36,9 +36,9 @@ MonoBehaviour:
     buildPath: $YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION
     openFolderPostBuild: 1
   _productParameters:
-    buildCounter: 27
-    lastGeneratedVersion: 1.0.1
-    version: 1.0.1
+    buildCounter: 29
+    lastGeneratedVersion: 1.0.3
+    version: 1.0.3
     autoGenerate: 1
   _releaseTypeList:
     releaseTypes:
@@ -141,7 +141,7 @@ MonoBehaviour:
       - 
       - 
       _Values:
-      - enabled: 0
+      - enabled: 1
         childKeys: []
       - enabled: 1
         childKeys:
@@ -151,12 +151,12 @@ MonoBehaviour:
       - enabled: 1
         childKeys:
         - DRM Free/PC/Windows x86
-      - enabled: 0
+      - enabled: 1
         childKeys: []
       - enabled: 1
         childKeys:
         - DRM Free/Linux/Linux x64
-      - enabled: 0
+      - enabled: 1
         childKeys: []
       - enabled: 1
         childKeys:
